@@ -3,7 +3,7 @@ import { Unit, FAQItem, Treatment, Step } from './types';
 export const HERO_CONTENT = {
   title: "Implantes com segurança, clareza e previsibilidade.",
   subtitle: "Tratamentos conduzidos pelo Dr. Fábio Guarnieri, especialista em Cirurgia Buco-Maxilo-Facial e Reconstrução Óssea.",
-  cta: "Agendar Avaliação Estratégica",
+  cta: "Agendar Avaliação",
   tagline: "Clareza antes da decisão. Segurança antes da cirurgia."
 };
 
