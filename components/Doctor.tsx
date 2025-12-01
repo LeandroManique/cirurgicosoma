@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DOCTOR_INFO } from '../constants';
 
 const Doctor: React.FC = () => {
@@ -8,16 +8,26 @@ const Doctor: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
           <div className="w-full lg:w-5/12 order-2 lg:order-1">
-             <div className="relative">
+             <div className="relative flex items-center justify-center">
                 {
-                  /* Use a resolved URL to the public asset to avoid path issues in dev/build */
+                  /* Use a resolved URL to the public asset and provide fallbacks to avoid path issues */
                 }
-                <img
-                  src={new URL('/dr_fabio.jpeg', import.meta.url).href}
-                  alt={DOCTOR_INFO.name}
-                  style={{ maxHeight: 520, width: '100%', objectFit: 'contain' }}
-                  className="rounded-sm grayscale-[30%] shadow-lg bg-white"
-                />
+                {(() => {
+                  const defaultUrl = new URL('/dr_fabio.jpeg', import.meta.url).href;
+                  const [src, setSrc] = useState<string>(defaultUrl);
+                  return (
+                    <img
+                      src={src}
+                      alt={DOCTOR_INFO.name}
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        if (target.src !== '/dr_fabio.jpeg') target.src = '/dr_fabio.jpeg';
+                      }}
+                      style={{ maxHeight: 520, width: '100%', objectFit: 'contain' }}
+                      className="rounded-sm grayscale-[30%] shadow-lg bg-white block"
+                    />
+                  );
+                })()}
                 <div className="absolute -bottom-6 -right-6 bg-warm p-8 max-w-xs shadow-sm hidden md:block border border-warmDark">
                   <p className="font-serif text-lg font-bold text-primary mb-1">{DOCTOR_INFO.reg}</p>
                   <p className="text-xs uppercase tracking-widest text-secondary">Registro Profissional</p>
