@@ -12,7 +12,7 @@ const Locations: React.FC = () => {
           </span>
           <h2 className="font-serif text-4xl lg:text-5xl text-primary mb-6">Comece com clareza</h2>
           <p className="text-secondary text-lg font-light">
-            Escolha a unidade mais próxima e agende sua Avaliação Estratégica.
+            Escolha a unidade mais próxima e agende sua avaliação.
           </p>
         </div>
 
