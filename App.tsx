@@ -8,7 +8,6 @@ import FAQ from './components/FAQ';
 import Locations from './components/Locations';
 import Footer from './components/Footer';
 import AIChat from './components/AIChat';
-import ScheduleButton from './components/ScheduleButton';
 
 const App: React.FC = () => {
   return (
@@ -22,7 +21,6 @@ const App: React.FC = () => {
       <Locations />
       <Footer />
       <AIChat />
-      <ScheduleButton />
     </main>
   );
 };
