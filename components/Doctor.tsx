@@ -9,8 +9,11 @@ const Doctor: React.FC = () => {
           
           <div className="w-full lg:w-5/12 order-2 lg:order-1">
              <div className="relative">
+                {
+                  /* Use a resolved URL to the public asset to avoid path issues in dev/build */
+                }
                 <img
-                  src="/dr_fabio.jpeg"
+                  src={new URL('/dr_fabio.jpeg', import.meta.url).href}
                   alt={DOCTOR_INFO.name}
                   style={{ maxHeight: 520, width: '100%', objectFit: 'contain' }}
                   className="rounded-sm grayscale-[30%] shadow-lg bg-white"
