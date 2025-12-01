@@ -11,7 +11,7 @@ const Doctor: React.FC = () => {
           <div className="w-full lg:w-5/12 order-2 lg:order-1 flex items-center">
             <div className="w-full max-w-md mx-auto">
               <img
-                src={new URL('/dr_fabio.jpeg', import.meta.url).href}
+                src="/dr_fabio.jpeg"
                 alt={DOCTOR_INFO.name}
                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                 style={{ width: '100%', maxHeight: 520, objectFit: 'cover' }}
