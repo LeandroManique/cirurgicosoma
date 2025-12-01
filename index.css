@@ -1,0 +1,12 @@
+/* Minimal stylesheet to avoid 404 on /index.css
+   Tailwind is loaded via CDN in index.html, so this file can be minimal.
+*/
+html, body {
+  height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Small helper to reduce layout flicker while fonts load */
+body { background-color: #ffffff; }
