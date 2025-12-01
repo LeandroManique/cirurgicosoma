@@ -9,10 +9,11 @@ const Doctor: React.FC = () => {
           
           <div className="w-full lg:w-5/12 order-2 lg:order-1">
              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=1000&auto=format&fit=crop" 
+                <img
+                  src="/dr_fabio.jpeg"
                   alt={DOCTOR_INFO.name}
-                  className="w-full h-auto object-cover rounded-sm grayscale-[30%] shadow-lg"
+                  style={{ maxHeight: 520, width: '100%', objectFit: 'contain' }}
+                  className="rounded-sm grayscale-[30%] shadow-lg bg-white"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-warm p-8 max-w-xs shadow-sm hidden md:block border border-warmDark">
                   <p className="font-serif text-lg font-bold text-primary mb-1">{DOCTOR_INFO.reg}</p>
