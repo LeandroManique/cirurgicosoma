@@ -7,35 +7,13 @@ const Doctor: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
-          <div className="w-full lg:w-5/12 order-2 lg:order-1">
-             <div className="relative flex items-center justify-center">
-                {
-                  /* Use a resolved URL to the public asset and provide fallbacks to avoid path issues */
-                }
-                {(() => {
-                  const defaultUrl = new URL('/dr_fabio.jpeg', import.meta.url).href;
-                  const [src, setSrc] = useState<string>(defaultUrl);
-                  return (
-                    <img
-                      src={src}
-                      alt={DOCTOR_INFO.name}
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        if (target.src !== '/dr_fabio.jpeg') target.src = '/dr_fabio.jpeg';
-                      }}
-                      style={{ maxHeight: 520, width: '100%', objectFit: 'contain' }}
-                      className="rounded-sm grayscale-[30%] shadow-lg bg-white block"
-                    />
-                  );
-                })()}
-                <div className="absolute -bottom-6 -right-6 bg-warm p-8 max-w-xs shadow-sm hidden md:block border border-warmDark">
-                  <p className="font-serif text-lg font-bold text-primary mb-1">{DOCTOR_INFO.reg}</p>
-                  <p className="text-xs uppercase tracking-widest text-secondary">Registro Profissional</p>
-                </div>
-             </div>
-          </div>
+          {/* Photo removed — using text-only presentation per request */}
 
-          <div className="w-full lg:w-7/12 order-1 lg:order-2">
+          <div className="w-full order-1">
+            <div className="mb-6 inline-block bg-warm p-6 rounded-sm shadow-sm border border-warmDark">
+              <p className="font-serif text-lg font-bold text-primary mb-1">{DOCTOR_INFO.reg}</p>
+              <p className="text-xs uppercase tracking-widest text-secondary">Registro Profissional</p>
+            </div>
             <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase block mb-6">
               Especialista Responsável
             </span>
