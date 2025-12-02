@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import WhySoma from './components/WhySoma';
 import Process from './components/Process';
 import Treatments from './components/Treatments';
+import DoctorProfile from './components/DoctorProfile';
 import FAQ from './components/FAQ';
 import Locations from './components/Locations';
 import Footer from './components/Footer';
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <WhySoma />
       <Process />
       <Treatments />
+      <DoctorProfile />
       <FAQ />
       <Locations />
       <Footer />
